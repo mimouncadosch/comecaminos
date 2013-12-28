@@ -38,9 +38,12 @@ if (app.get('env') === 'production') {
 
 // serve all asset files from necessary directories
 app.use("/js", express.static(__dirname + "/public/js"));
+app.use("/images", express.static(__dirname + "/public/images"));
+app.use("/font-awesome-4.0.3", express.static(__dirname + "/public/font-awesome-4.0.3"));
 app.use("/css", express.static(__dirname + "/public/css"));
 app.use("/partials", express.static(__dirname + "/public/partials"));
 app.use("/lib", express.static(__dirname + "/public/lib"));
+app.use("/fonts", express.static(__dirname + "/public/fonts"));
 
 // JSON API
 app.get('/api/name', api.name);
@@ -49,6 +52,7 @@ app.get('/api/name', api.name);
 app.all("/*", function(req, res, next) {
 	res.sendfile("index.html", { root: __dirname + "/public" });
 });
+
 
 
 /**
