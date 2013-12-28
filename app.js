@@ -49,11 +49,21 @@ app.use("/fonts", express.static(__dirname + "/public/fonts"));
 app.get('/api/name', api.name);
 
 // redirect all others to the index (HTML5 history)
-app.all("/*", function(req, res, next) {
+app.all("/", function(req, res, next) {
 	res.sendfile("index.html", { root: __dirname + "/public" });
 });
 
+app.get("/reserva", function(req, res, next) {
+	res.sendfile("index2.html", { root: __dirname + "/public" });
+});
 
+app.get("/sobrenos", function(req, res, next) {
+	res.sendfile("index3.html", { root: __dirname + "/public" });
+});
+
+app.get("/menus", function(req, res, next) {
+	res.sendfile("index4.html", { root: __dirname + "/public" });
+});
 
 /**
  * Start Server

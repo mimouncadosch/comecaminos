@@ -1,8 +1,23 @@
 {
-	"name": "application-name",
-	"version": "0.0.1",
-	"private"		: true,
-	"dependencies"	: {
-		"express": "*"
-	}
+  "name": "comecaminos",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "express": "*"
+  },
+  "description": "[Express.js](expressjs.com) [Angular.js](http://angularjs.org/) Seed   – No templating system, no jade or ejs.   – Uses straightforward html.   – Deeplinking within Angular.js",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mimouncadosch/comecaminos.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mimouncadosch/comecaminos/issues"
+  }
 }
